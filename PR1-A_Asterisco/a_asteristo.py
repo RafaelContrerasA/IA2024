@@ -102,11 +102,21 @@ def heuristica(p1, p2):
 
 
 def reconstruir_camino(nodo_actual, dibujar):
+    camino = []
+    camino.append(nodo_actual.get_pos()) #Agregar el final al camino, estetico
+
     while nodo_actual.padre:
         nodo_actual = nodo_actual.padre
         nodo_actual.hacer_camino()
+        camino.append(nodo_actual.get_pos())
         dibujar()
 
+    # Imprimir la ruta final
+    print("Ruta Final:")
+    camino.reverse()
+    for pos in camino:
+        print(pos)
+    
 
 def a_estrella(dibujar, grid, inicio, fin):
     cont = 0
@@ -126,6 +136,10 @@ def a_estrella(dibujar, grid, inicio, fin):
         nodo_actual = open_set.get()[2]
         open_set_hash.remove(nodo_actual)
         closed_set.add(nodo_actual)
+
+        # Imprimir las listas abierta y cerrada
+        print("Lista Abierta:", [n.get_pos() for n in open_set_hash])
+        print("Lista Cerrada:", [n.get_pos() for n in closed_set])
 
         # Verificar si llegamos al nodo final
         if nodo_actual == fin:
@@ -167,6 +181,7 @@ def a_estrella(dibujar, grid, inicio, fin):
             nodo_actual.hacer_cerrado()
 
     return False
+
 
 
 def crear_grid(filas, ancho):
