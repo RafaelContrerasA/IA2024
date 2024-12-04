@@ -7,6 +7,9 @@ Tareas de la asignatura de Inteligencia Artificial.
 
 ## Indice del repositorio
 
+### Examen
+1. [Clasificacion de clientes segun perdil financiero](Clasificacion_Clientes_Segun_Perfil_Financiero/README.md)
+
 ### Proyectos 
 1. [A Asterisco](PR1-A_Asterisco/README.md)
 2. [Phaser](PR2-Phaser/README.md)

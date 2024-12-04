@@ -278,6 +278,7 @@ def entrenar_modelo():
     if len(datos_modelo) < 10:  # Verificar que hay suficientes datos
         print("Insuficientes datos para entrenar el modelo.")
         return
+    
     datos = np.array(datos_modelo)
     X = datos[:, :2]
     y = datos[:, 2]
@@ -418,7 +419,7 @@ def main():
                 # Guardar los datos si estamos en modo manual
                 guardar_datos()
 
-            if modo_auto:             
+            if modo_auto:         
                 
                 if contador_decidir_salto >= intervalo_decidir_salto:
                     decidir_salto()
