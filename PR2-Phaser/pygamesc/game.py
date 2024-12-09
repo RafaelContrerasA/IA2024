@@ -283,10 +283,12 @@ def entrenar_modelo():
     X = datos[:, :2]
     y = datos[:, 2]
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
     modelo = Sequential([
         Dense(4, input_dim=2, activation='relu'),
         Dense(1, activation='sigmoid')
     ])
+    
     modelo.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
     modelo.fit(X_train, y_train, epochs=100, batch_size=32, verbose=1)
     loss, accuracy = modelo.evaluate(X_test, y_test, verbose=0)

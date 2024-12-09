@@ -26,7 +26,7 @@ COSTO_DIAGONAL = 14
 
 
 # Control de delay (en milisegundos)
-DELAY = 1000  # Ajusta este valor para aumentar/disminuir la velocidad
+DELAY = 500  # Ajusta este valor para aumentar/disminuir la velocidad
 
 
 class Nodo:
@@ -81,9 +81,9 @@ class Nodo:
         pygame.draw.rect(ventana, self.color, (self.x, self.y, self.ancho, self.ancho))
         if self.g != float("inf"):
             fuente = pygame.font.SysFont('Arial', 10)
-            g_val = int(self.g) if self.g != float('inf') else "∞"
-            f_val = int(self.f) if self.f != float('inf') else "∞"
-            h_val = int(self.h) if self.h != float('inf') else "∞"
+            g_val = int(self.g) if self.g != float('inf') else " "
+            f_val = int(self.f) if self.f != float('inf') else " "
+            h_val = int(self.h) if self.h != float('inf') else " "
             texto = fuente.render(f"G:{g_val} F:{f_val} H:{h_val}", True, GRIS)
             ventana.blit(texto, (self.x + 2, self.y + 2))
 
@@ -175,10 +175,13 @@ def a_estrella(dibujar, grid, inicio, fin):
                         vecino.hacer_abierto()
 
         # Dibujar y retrasar para observar el algoritmo
-        dibujar()
-        pygame.time.delay(DELAY)  # Pausa para observar los pasos
+         # Pausa para observar los pasos
         if nodo_actual != inicio:
             nodo_actual.hacer_cerrado()
+
+        #Aca abajo pa que se imprima tambien el mov    
+        dibujar()
+        pygame.time.delay(DELAY) 
 
     return False
 
