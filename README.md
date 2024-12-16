@@ -12,6 +12,7 @@ Tareas de la asignatura de Inteligencia Artificial.
 2. [Phaser](PR2-Phaser/README.md)
 3. [CNN Carros](PR3-Carros/README.md)
 4. [Reforma Judicial y desaparición organismos autonomos](PR4-Reforma_Judicial/README.md)
+   (https://www.youtube.com/watch?v=x7_TbscxuHw)
 
 ### Examen
 1. [Clasificacion de clientes segun perfil financiero](Clasificacion_Clientes_Segun_Perfil_Financiero/README.md)

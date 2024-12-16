@@ -1,5 +1,8 @@
 # Proyecto 4: Análisis a la Reforma Judicial y Organismos Autónomos mediante IA
 
+### Enlace del video
+https://www.youtube.com/watch?v=x7_TbscxuHw
+
 Este proyecto tiene como objetivo analizar las percepciones y opiniones relacionadas con la Reforma al Poder Judicial y la desaparición de organismos autónomos en México, utilizando herramientas de análisis de lenguaje y modelos de lenguaje extenso (LLMs).
 
 # 1. Recolección de Información
